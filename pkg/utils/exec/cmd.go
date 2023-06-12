@@ -2,7 +2,7 @@ package exec
 
 import (
 	"fmt"
-	strutil "github.com.yasyx.container-license/pkg/utils/strings"
+	strutil "github.com/yasyx/container-license/pkg/utils/strings"
 	"os"
 	"os/exec"
 	"strings"

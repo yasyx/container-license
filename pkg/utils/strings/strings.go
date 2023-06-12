@@ -3,7 +3,7 @@ package strings
 import (
 	"bytes"
 	"fmt"
-	"github.com.yasyx.container-license/pkg/utils/logger"
+	"github.com/yasyx/container-license/pkg/utils/logger"
 	"net"
 	"regexp"
 	"sort"

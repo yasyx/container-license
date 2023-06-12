@@ -1,10 +1,10 @@
 package license
 
 import (
-	"github.com.yasyx.container-license/pkg/constants"
-	"github.com.yasyx.container-license/pkg/utils/encrypt"
-	"github.com.yasyx.container-license/pkg/utils/logger"
 	"github.com/robfig/cron/v3"
+	"github.com/yasyx/container-license/pkg/constants"
+	"github.com/yasyx/container-license/pkg/utils/encrypt"
+	"github.com/yasyx/container-license/pkg/utils/logger"
 	"os"
 	"strconv"
 	"strings"
