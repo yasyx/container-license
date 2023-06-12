@@ -2,12 +2,12 @@ package strings
 
 import (
 	"bytes"
+	"cn.yasyx.container-license/pkg/utils/logger"
 	"fmt"
 	"net"
 	"regexp"
 	"sort"
 	"strings"
-	"udesk_license/pkg/utils/logger"
 	"unicode"
 )
 

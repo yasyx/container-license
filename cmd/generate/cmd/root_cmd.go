@@ -1,15 +1,15 @@
 package cmd
 
 import (
+	"cn.yasyx.container-license/pkg/constants"
+	"cn.yasyx.container-license/pkg/utils/encrypt"
+	myfile "cn.yasyx.container-license/pkg/utils/file"
+	"cn.yasyx.container-license/pkg/utils/logger"
 	"fmt"
 	"github.com/spf13/cobra"
 	"os"
 	"strconv"
 	"time"
-	"udesk_license/pkg/constants"
-	"udesk_license/pkg/utils/encrypt"
-	myfile "udesk_license/pkg/utils/file"
-	"udesk_license/pkg/utils/logger"
 )
 
 var (

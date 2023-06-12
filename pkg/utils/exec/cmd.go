@@ -1,11 +1,11 @@
 package exec
 
 import (
+	strutil "cn.yasyx.container-license/pkg/utils/strings"
 	"fmt"
 	"os"
 	"os/exec"
 	"strings"
-	strutil "udesk_license/pkg/utils/strings"
 )
 
 func Cmd(name string, args ...string) error {

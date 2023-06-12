@@ -1,4 +1,4 @@
-module udesk_license
+module cn.yasyx.container-license
 
 go 1.20
 

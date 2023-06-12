@@ -1,6 +1,6 @@
 package main
 
-import "udesk_license/cmd/checker/cmd"
+import "cn.yasyx.container-license/cmd/checker/cmd"
 
 func main() {
 	cmd.Execute()

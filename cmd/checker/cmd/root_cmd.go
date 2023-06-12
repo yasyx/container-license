@@ -1,12 +1,12 @@
 package cmd
 
 import (
+	"cn.yasyx.container-license/pkg/license"
+	"cn.yasyx.container-license/pkg/utils/exec"
+	"cn.yasyx.container-license/pkg/utils/logger"
 	"fmt"
 	"github.com/spf13/cobra"
 	"os"
-	"udesk_license/pkg/license"
-	"udesk_license/pkg/utils/exec"
-	"udesk_license/pkg/utils/logger"
 )
 
 var (
