@@ -1,1 +1,3 @@
-docker build --build-arg="PROJECT_UUID=58f34c72-46d5-4fab-9666-b8530b0189ce" --build-arg="PROJECT_LICENSE_MONTH=36" . -t chengzilong/license:0.1
+### a tool add license to image
+### build the project
+docker build --build-arg="PROJECT_UUID=58f34c72-46d5-4fab-9666-b8530b0189ce" --build-arg="PROJECT_LICENSE_MONTH=36" . -t container/license:0.1
