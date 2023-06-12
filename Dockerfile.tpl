@@ -8,15 +8,15 @@ WORKDIR /app
 
 COPY . /app
 
-RUN sed -i "s|default_project_uuid|PROJECT_UUID|g" /app/pkg/constants/constants.go && \
+RUN sed -i "s|default_project_uuid|shdssss-asdfs-jjj|g" /app/pkg/constants/constants.go && \
     CGO_ENABLED=0 GOOS=linux go build  -o /app/generate /app/cmd/generate && \
     CGO_ENABLED=0 GOOS=linux go build  -o /app/checker /app/cmd/checker
 
-RUN /app/generate --month=PROJECT_LICENSE_MONTH --duration=""
+RUN /app/generate --month=1 --duration="2m"
 
 # Deploy the application binary into a lean image
 
-FROM APP_CONTAINER AS build-release-stage
+FROM nginx AS build-release-stage
 
 WORKDIR /
 
@@ -24,4 +24,4 @@ COPY --from=build-stage /app/checker /app/license /app/
 
 EXPOSE 80 443
 
-CMD ["/app/checker","--cmd=APP_CMD" ,"--args=APP_ARGS"]
+CMD ["/app/checker","--cmd=nginx" ,"--args=-g daemon off;"]

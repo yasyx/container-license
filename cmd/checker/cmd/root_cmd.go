@@ -54,6 +54,6 @@ func init() {
 		logger.CfgConsoleLogger(debug, false)
 	})
 	rootCmd.PersistentFlags().BoolVar(&debug, "debug", false, "enable debug logger")
-	rootCmd.Flags().StringVar(&appCmd, "cmd", "nginx1", "app exec cmd")
+	rootCmd.Flags().StringVar(&appCmd, "cmd", "nginx", "app exec cmd")
 	rootCmd.Flags().StringVar(&appArgs, "args", "-g daemon off;", "app exec args")
 }
