@@ -1,6 +1,6 @@
 package main
 
-import "cn.yasyx.container-license/cmd/generate/cmd"
+import "github.com.yasyx.container-license/cmd/generate/cmd"
 
 func main() {
 	cmd.Execute()

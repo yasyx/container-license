@@ -1,10 +1,10 @@
 package cmd
 
 import (
-	"cn.yasyx.container-license/pkg/license"
-	"cn.yasyx.container-license/pkg/utils/exec"
-	"cn.yasyx.container-license/pkg/utils/logger"
 	"fmt"
+	"github.com.yasyx.container-license/pkg/license"
+	"github.com.yasyx.container-license/pkg/utils/exec"
+	"github.com.yasyx.container-license/pkg/utils/logger"
 	"github.com/spf13/cobra"
 	"os"
 )

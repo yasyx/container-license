@@ -1,8 +1,8 @@
 package exec
 
 import (
-	strutil "cn.yasyx.container-license/pkg/utils/strings"
 	"fmt"
+	strutil "github.com.yasyx.container-license/pkg/utils/strings"
 	"os"
 	"os/exec"
 	"strings"

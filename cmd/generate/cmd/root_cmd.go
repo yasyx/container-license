@@ -1,11 +1,11 @@
 package cmd
 
 import (
-	"cn.yasyx.container-license/pkg/constants"
-	"cn.yasyx.container-license/pkg/utils/encrypt"
-	myfile "cn.yasyx.container-license/pkg/utils/file"
-	"cn.yasyx.container-license/pkg/utils/logger"
 	"fmt"
+	"github.com.yasyx.container-license/pkg/constants"
+	"github.com.yasyx.container-license/pkg/utils/encrypt"
+	myfile "github.com.yasyx.container-license/pkg/utils/file"
+	"github.com.yasyx.container-license/pkg/utils/logger"
 	"github.com/spf13/cobra"
 	"os"
 	"strconv"
