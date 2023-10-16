@@ -12,7 +12,7 @@ RUN sed -i "s|default_project_uuid|shdssss-asdfs-jjj|g" /app/pkg/constants/const
     CGO_ENABLED=0 GOOS=linux go build  -o /app/generate /app/cmd/generate && \
     CGO_ENABLED=0 GOOS=linux go build  -o /app/checker /app/cmd/checker
 
-RUN /app/generate --month=1 --duration="2m"
+RUN /app/generate --month=1 --duration=""
 
 # Deploy the application binary into a lean image
 

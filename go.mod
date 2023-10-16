@@ -1,4 +1,4 @@
-module github.com/yasyx/container-license
+module  github.com/yasyx/container-license
 
 go 1.20
 

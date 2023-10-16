@@ -63,7 +63,7 @@ var rootCmd = &cobra.Command{
 		if err != nil {
 			logger.Error(err)
 		}
-		logger.Info(s)
+		logger.Info("授权秘钥:[%v],授权到期时间:[%v]", s, licenseDate)
 		return err
 	},
 	// Uncomment the following line if your bare application

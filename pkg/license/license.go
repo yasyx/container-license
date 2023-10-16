@@ -4,6 +4,7 @@ import (
 	"github.com/robfig/cron/v3"
 	"github.com/yasyx/container-license/pkg/constants"
 	"github.com/yasyx/container-license/pkg/utils/encrypt"
+	myfile "github.com/yasyx/container-license/pkg/utils/file"
 	"github.com/yasyx/container-license/pkg/utils/logger"
 	"os"
 	"strconv"
@@ -47,7 +48,7 @@ func decryptLicense() (error, string, int64) {
 
 func (l *License) CronCheckLicense() {
 	c := cron.New(cron.WithSeconds())
-	_, err := c.AddFunc("*/5 * * * * ?", func() {
+	_, err := c.AddFunc("0 0 0/1 * * ?", func() {
 		license := l.checkLicense()
 		if !license {
 			os.Exit(1)
@@ -88,6 +89,18 @@ func (l *License) checkLicense() bool {
 	if l.expiryTime < now {
 		logger.Info("授权已过期: 授权到期时间为:%v", time.Unix(l.expiryTime, 0).Add(time.Hour*8).Format("2006-01-02 15:04:05"))
 		return false
+	}
+	// 写入过期时间文件
+	exist := myfile.CheckFileIsExist("/app/expiry-time")
+	if exist {
+		err := os.Remove("/app/expiry-time")
+		if err != nil {
+			logger.Error("Remove expiry time err:%v", err)
+		}
+	}
+	err = os.WriteFile("/app/expiry-time", []byte(strconv.FormatInt(l.expiryTime, 10)), 0666)
+	if err != nil {
+		logger.Error("write expiry time err:%v", err)
 	}
 	return true
 }
